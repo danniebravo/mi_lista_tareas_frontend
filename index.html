@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi lista de tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">ORGANIZA TU DÍA</p>
+        <h1>Mi lista de tareas</h1>
+        <p class="subtitle">Un espacio sencillo para organizar tus pendientes.</p>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section class="summary" aria-label="Resumen de tareas">
+      <div class="summary-card">
+        <span class="summary-number" id="totalCount">0</span>
+        <span class="summary-label">En total</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number" id="pendingCount">0</span>
+        <span class="summary-label">Pendientes</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number" id="doneCount">0</span>
+        <span class="summary-label">Completadas</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Agregar una tarea</h2>
+      <form id="taskForm" class="task-form">
+        <label class="sr-only" for="taskInput">Nombre de la tarea</label>
+        <input id="taskInput" type="text" placeholder="Ej. Estudiar para el parcial..." maxlength="90" required>
+        <button type="submit">Agregar</button>
+      </form>
+      <div class="list-heading">
+        <h2>Mis pendientes</h2>
+        <button id="clearDone" class="text-button" type="button">Limpiar completadas</button>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyMessage" class="empty-message">Todavía no tienes tareas. ¡Agrega la primera!</p>
+    </section>
+    <footer>Proyecto frontend · HTML, CSS y JavaScript</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
